@@ -8,6 +8,7 @@
 </head>
 <body>
     <a href="/">Laravel</a> | <a href="/about">about</a> | <a href="contact">contact</a>
+    สวัสดี,@if(Auth()->check()) {{Auth()->User()->name}} <a href="/Auth/logout">ออกจากระบบ</a> @else บุคคลทั่วไป @endif
     @yield("content")
     <hr>
     &copy; 2021 Adisorn Nampia

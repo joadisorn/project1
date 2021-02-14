@@ -2,9 +2,9 @@
 
 @section('content')
     <h1>กรุณากรอกข้อมูล</h1>
-    <form action="/category/store" method="post">
+    <form action="/Post/update/{{$User->id}}" method="post">
         @csrf
-        <input type="text" name="name" required>
+        <input type="text" name="name" value="{{$User->name}}" required>
         <button type="submit">บันทึก</button>
     </form>
 @endsection
